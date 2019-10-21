@@ -1,5 +1,11 @@
 #include <iostream>
+#include "main.h"
+
+void PrintLine(const char* msg)
+{
+	std::cout << msg << "\n";
+}
 
 int main() {
-	std::cout << "Hello, Wuerzburg\n";
+	PrintLine("Hello, Wuerzburg");
 }
