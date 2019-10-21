@@ -1,5 +1,4 @@
 #include <iostream>
-#include "main.h"
 
 void PrintLine(const char* msg)
 {
