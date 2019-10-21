@@ -1,5 +1,10 @@
 #include <iostream>
 
+void Print(const char* msg)
+{
+	std::cout << msg;
+}
+
 int main() {
-	std::cout << "Hello, Wuerzburg\n";
+	Print("Hello, Wuerzburg\n");
 }
