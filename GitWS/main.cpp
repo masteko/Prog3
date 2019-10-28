@@ -1,10 +1,10 @@
 #include <iostream>
 
-void PrintLine(const char* msg)
+void Print(const char* msg)
 {
-	std::cout << msg << "\n";
+	std::cout << msg;
 }
 
 int main() {
-	PrintLine("Hello, Wuerzburg");
+	Print("Hello, Wuerzburg\n");
 }
