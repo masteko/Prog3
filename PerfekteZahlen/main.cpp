@@ -4,9 +4,9 @@
 using namespace std;
 
 int main() {
-	bool searching{ true };
-	int number{ 5 };
-	time_t startTime = time(nullptr);
+	auto searching{ true };
+	auto number{ 5 };
+	auto startTime = time(nullptr);
 
 	while (searching) {
 		auto sum{ 0 };
