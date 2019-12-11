@@ -35,6 +35,7 @@ bool IsPerfectNumber(int sum, int number) {
 	return sum == number;
 }
 
+const int MaxCalcTime{ 120 };
 bool IsTimeLimitExceeded(time_t startTime, int MaxCalcTime) {
 	return (time(nullptr) - startTime) < MaxCalcTime;
 }
@@ -43,13 +44,16 @@ void PrintLastNumber(int number) {
 	std::cout << "Letzte Zahl: " << number << endl;
 }
 
+void ResetStartTime(time_t startTime) {
+	startTime = time(nullptr);
+}
+
+const int MaxDividers{ 1000 };
 int main() {
 	auto number{ 5 };
 	auto startTime = time(nullptr);
-	const int MaxCalcTime{ 120 };
 
 	while (IsTimeLimitExceeded(startTime, MaxCalcTime)) {
-		const int MaxDividers{ 1000 };
 		int dividers[MaxDividers];
 		++number;
 
@@ -58,7 +62,7 @@ int main() {
 
 		if (IsPerfectNumber(sum, number)) {
 			PrintPerfectNumber(dividersCount, number, dividers);
-			startTime = time(nullptr);
+			ResetStartTime(startTime);
 		}
 	};
 
